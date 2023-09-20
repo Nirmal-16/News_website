@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive gallery website</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@100&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Skranji:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Skranji:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Skranji:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inconsolata&family=Skranji:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Dancing+Script:wght@700&family=Inconsolata&family=Skranji:wght@700&display=swap" rel="stylesheet">
+    <style>
+        *{
+                margin:0px;
+                padding:0px;
+                box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(58, 58, 58);
+        }
+        .container{
+            width:85%;
+            margin:auto;
+            padding:0px 10px;
+        }
+        .homepage{
+            background-image: url(/backgrund\ image.jpg);
+            background-repeat: no-repeat;
+            background-size:cover;
+            height:100vh;
+        }
+        nav{
+            display:flex;
+            font-family: 'Skranji', cursive;
+            justify-content: space-between;
+            align-items: center;
+        }
+        h1{
+            padding:10px 20px;
+            color:white;
+            font-size: 24px;
+            font-family: 'Skranji', cursive;
+            letter-spacing: 1px;
+        }
+        li{
+            list-style:none;
+            display: inline-block;
+            padding:10px;
+            text-align: center;
+        }
+        li a{
+            text-decoration: none;
+            color:white;
+            font-size: 17px;
+            font-family: 'Cinzel', serif;            
+            letter-spacing: 1px;
+            font-weight:bold;
+        }
+        li a:hover{
+            color:black;
+            text-decoration: underline;
+        }
+        input{
+            padding:10px;
+            border-radius: 20px; 
+            border:2px solid white;
+            outline:none;
+            background-color: transparent;
+            letter-spacing: 1px;
+            letter-spacing: 1px;
+            font-family: 'Cinzel', serif;
+            color:white;
+        }
+        ::placeholder{
+            color:white;
+        }
+        .inspiration{
+            padding:8px 17px;
+            color:white;
+            background-color: rgb(39, 140, 255);
+            border:none;
+            border-radius:1px;
+            margin-bottom:10px;
+            letter-spacing: 2px;
+            font-family: 'Cinzel', serif;
+            font-size:15px;
+        }
+        .homecontent{
+            margin-top:300px;
+            width:75%;
+            padding:10px;
+            margin-left:30px;
+            background-color: rgba(0, 0, 0, 0.212);
+        }
+        .quotes{
+            font-size:43px;
+            line-height: 49px;
+            padding:0px;
+            text-align: left;
+            font-family: 'Dancing Script', cursive;
+        }
+        .paraquotes{
+            color:white;
+            width:60%;
+            margin-top:20px;
+            line-height: 30px;
+            font-size: 18px;
+            font-family: 'Cinzel', serif;
+            letter-spacing: 1px;
+        }
+        .read_more{
+            padding:10px;
+            background-color: transparent;
+            color:white;
+            border:2px solid white;
+            margin-top: 20px;
+            font-size: 16px;
+            border-radius: 3px;
+            font-family: 'Cinzel', serif;
+        }
+        .read_more:hover{
+            background-color: rgb(255, 255, 255);
+            color:rgb(0, 0, 0);
+            border:none;
+        }
+        .bottom{
+            width:97%;
+            margin:auto;
+            display:flex;
+        }
+        .left{
+            width:70%;
+            position:relative;
+        }
+        .links{
+            margin:7px;
+            background-color: rgb(83, 83, 83);
+            height:43vh;
+        }
+        .left ul{
+            padding:5px;
+            display: flex;
+            justify-content: space-around;
+            height:17%;
+        }
+        .left li{
+            padding:10px;
+            letter-spacing: 1px;
+            font-size:17px;
+            color:white;
+            font-family: 'Cinzel', serif;
+        }
+        .left img{
+            width:100%;
+            height:83%;        
+        }
+        .right{
+            width:30%;
+        }
+        .first{
+            margin:7px 14px 14px;
+            background-color: rgb(83,83,83);
+        }
+        .first ul{
+            display:flex;
+            padding:10px;
+            justify-content: space-around;
+            color:white;
+        }
+        .first p{
+            padding:20px;
+            background-color: white;
+            border-bottom:1px solid rgb(196, 196, 196);
+        }
+        .first p span{
+            color:grey;
+        }
+        .leftsecondrow{
+             display:flex;
+        }
+        .childplay{
+            width:50%;
+            height:20%;
+            margin:7px;
+        }
+        .childplay h1{
+            color:black;
+            background-color: white;
+            font-style:normal;
+        }
+        .pen{
+            width:50%;
+            margin:7px;
+        }
+        .pen h1{
+            color:black;
+            background-color: white;
+            font-style:normal;
+        }
+        .second{
+            margin:7px 14px 14px;
+            background-color: rgb(83,83,83);
+        }
+        .second ul{
+            padding:10px;
+            text-align: center;
+            color:white;
+        }
+        .second img{
+            width:100%;
+        }
+        .thirdrow img{
+            width:48%;
+            margin:7px;
+            position:absolute;
+            top:675px;
+            height:75vh;
+        }
+        .forthrow{
+            width:48%;
+            position:relative;
+            top:14px;
+            left:435px;
+        }
+        .forthrow h1{
+            background-color: white;
+            color:black;
+        }
+        .third ul{
+            padding:10px;
+            margin-top:7px;
+            text-align: center;
+            color:white;
+        }
+        .third img{
+            width:100%;
+        }
+        .third{
+            margin:10px;
+            background-color: rgb(83,83,83);
+            margin:7px 14px 14px;
+        }
+        .loadmore p{
+            padding:19px;
+            margin:40px 10px 10px;
+            text-align: center;
+            color:white;
+            background-color: grey;
+        }
+        .footer{
+            padding:15px 15px 25px;
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="homepage">
+            <nav>
+                <h1>ALEO!</h1>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Connect</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><input type="search" placeholder="Search Something..." value=""><i class='fa fa-search' style="margin-left:10px;color:white;background-color:transparent;padding:5px;position:relative;
+                    top:7px;font-size:20px"></i></li>
+                </ul>
+            </nav>
+            <div class="homecontent">
+                <button class="inspiration">INSPIRATION</button>
+                <h1 class="quotes">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime atque ipsum distinctio quia facere delectus!</h1>
+                <p class="paraquotes">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi porro, enim commodi minima officiis non.</p>
+                <button class="read_more">READ MORE</button>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="left">
+                <div class="callme">
+                    <div class="links">
+                        <ul>
+                            <li>LIFESTYLE</li>
+                            <li>TECHNO</li>
+                            <li>SCIENCE</li>
+                            <li>EDUCATION</li>
+                            <li>NATURE</li>
+                            <li>TIPS</li>
+                            <li>...</li>
+                        </ul>
+                        <img src="/quotes 1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="leftsecondrow">
+                    <div class="childplay">
+                        <img src="child.jpg" alt="">
+                        <h1>Embers Camping Beaulieu .New Forest</h1>
+                    </div>
+                    <div class="pen">
+                        <img src="pen.jpeg" alt="">
+                        <h1>Fighting bugs width bugs:this time it's personal</h1>
+                    </div>
+                    
+                </div>
+                <div class="thirdrow">
+                    <img src="photograph.jpeg" alt="">
+                </div>
+                <div class="forthrow">
+                    <img src="/news.jpg" alt="">
+                    <h1>Best laptop deals from budget to extreme. These are the best deals on home use laptops, gaming laptops.</h1>
+                </div>
+                <div class="loadmore">
+                    <p>LOAD MORE</p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="first">
+                    <ul>
+                        <li>TRENDING</li>
+                        <li>EDITORS PICK</li>
+                    </ul>
+                    <div class="list">
+                        <p>FASHION // <span>A Lesson In Summer Styling</span></p>
+                        <p>FASHION // <span>How to Wear Brodere Anglase</span></p>
+                        <p>TRAVEL // <span>A Family Adventure</span></p>
+                        <p>TECH // <span>Malware is Not Only About Virus</span></p>
+                        <p>SCIENCE // <span>The First Space Walk</span></p>
+                        <p>FILM // The Last of the Silent Movie Stars</p>
+                    </div>
+                </div>
+                <div class="second">
+                    <ul>
+                        <li>WEATHER</li>
+                    </ul>
+                    <img src="weather.png" alt="">
+                </div>
+                <div class="third">
+                    <ul>
+                        <li>PHOTO GALLERY</li>
+                    </ul>
+                    <img src="news.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="footer">Made by 🤍 Nirmal</p>
+    <script src="js/all.min.js"></script>
+</body>
+</html>
